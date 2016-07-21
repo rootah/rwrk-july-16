@@ -29,7 +29,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rwrkmain));
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
@@ -66,26 +65,17 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.formAssistant1 = new DevExpress.XtraBars.FormAssistant();
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel();
+            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager();
             this.groupsPanel = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gdetailPanel = new DevExpress.XtraBars.Docking.DockPanel();
             this.controlContainer1 = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.stdsPanel = new DevExpress.XtraBars.Docking.DockPanel();
-            this.dockPanel3_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
-            this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
             this.stddtlPanel = new DevExpress.XtraBars.Docking.DockPanel();
             this.controlContainer2 = new DevExpress.XtraBars.Docking.ControlContainer();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
-            this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
-            this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
+            this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager();
+            this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView();
             this.cardView1 = new DevExpress.XtraGrid.Views.Card.CardView();
             this.colCustomResizeZoneThickness = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colBackgroundImage = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -103,23 +93,35 @@
             this.colUseSnappingEmulation = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAllowResetLayout = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colOptionsLayout = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.stdsPanel = new DevExpress.XtraBars.Docking.DockPanel();
+            this.dockPanel3_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
+            this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
+            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
+            this.navBarControl2 = new DevExpress.XtraNavBar.NavBarControl();
+            this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem5 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem6 = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageViewControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.groupsPanel.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.gdetailPanel.SuspendLayout();
-            this.stdsPanel.SuspendLayout();
-            this.dockPanel3_Container.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             this.stddtlPanel.SuspendLayout();
             this.controlContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cardView1)).BeginInit();
+            this.stdsPanel.SuspendLayout();
+            this.dockPanel3_Container.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControl2)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -147,9 +149,10 @@
             this.schedcheckButt,
             this.barStaticItem5,
             this.gdtlcheckButt,
-            this.stdtlscheckButt});
+            this.stdtlscheckButt,
+            this.barButtonItem9});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 24;
+            this.ribbonControl1.MaxItemId = 25;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPageCategory1});
@@ -174,10 +177,10 @@
             this.backstageViewControl1.GlyphLocation = DevExpress.Utils.Drawing.ItemLocation.Right;
             this.backstageViewControl1.GlyphToCaptionIndent = 15;
             this.backstageViewControl1.Items.Add(this.backstageViewButtonItem1);
-            this.backstageViewControl1.Location = new System.Drawing.Point(670, 0);
+            this.backstageViewControl1.Location = new System.Drawing.Point(1132, 31);
             this.backstageViewControl1.Name = "backstageViewControl1";
             this.backstageViewControl1.OwnerControl = this.ribbonControl1;
-            this.backstageViewControl1.Size = new System.Drawing.Size(341, 175);
+            this.backstageViewControl1.Size = new System.Drawing.Size(250, 65);
             this.backstageViewControl1.Style = DevExpress.XtraBars.Ribbon.BackstageViewStyle.Office2013;
             this.backstageViewControl1.TabIndex = 5;
             // 
@@ -189,9 +192,10 @@
             // 
             // barStaticItem1
             // 
-            this.barStaticItem1.Caption = "create ~ |";
-            this.barStaticItem1.Enabled = false;
+            this.barStaticItem1.Caption = "create :";
             this.barStaticItem1.Id = 2;
+            this.barStaticItem1.ItemAppearance.Normal.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.barStaticItem1.ItemAppearance.Normal.Options.UseForeColor = true;
             this.barStaticItem1.Name = "barStaticItem1";
             this.barStaticItem1.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
@@ -372,6 +376,7 @@
             this.ribbonPageGroup3.ItemLinks.Add(this.schedcheckButt);
             this.ribbonPageGroup3.ItemLinks.Add(this.gdtlcheckButt, true);
             this.ribbonPageGroup3.ItemLinks.Add(this.stdtlscheckButt);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem9, true);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "ribbonPageGroup3";
             // 
@@ -414,11 +419,11 @@
             // 
             this.dockManager1.Form = this;
             this.dockManager1.HiddenPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
-            this.groupsPanel,
             this.gdetailPanel,
             this.stddtlPanel});
             this.dockManager1.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
-            this.stdsPanel});
+            this.stdsPanel,
+            this.groupsPanel});
             this.dockManager1.TopZIndexControls.AddRange(new string[] {
             "DevExpress.XtraBars.BarDockControl",
             "DevExpress.XtraBars.StandaloneBarDockControl",
@@ -444,45 +449,16 @@
             this.groupsPanel.Options.ShowAutoHideButton = false;
             this.groupsPanel.Options.ShowCloseButton = false;
             this.groupsPanel.OriginalSize = new System.Drawing.Size(236, 200);
-            this.groupsPanel.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Left;
-            this.groupsPanel.SavedIndex = 0;
             this.groupsPanel.Size = new System.Drawing.Size(236, 423);
             this.groupsPanel.Text = "groups";
-            this.groupsPanel.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
             // 
             // dockPanel1_Container
             // 
-            this.dockPanel1_Container.Controls.Add(this.gridControl1);
+            this.dockPanel1_Container.Controls.Add(this.navBarControl2);
             this.dockPanel1_Container.Location = new System.Drawing.Point(4, 38);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
             this.dockPanel1_Container.Size = new System.Drawing.Size(227, 381);
             this.dockPanel1_Container.TabIndex = 0;
-            // 
-            // gridControl1
-            // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 0);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.MenuManager = this.ribbonControl1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(227, 381);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsFind.ShowClearButton = false;
-            this.gridView1.OptionsView.ShowColumnHeaders = false;
-            this.gridView1.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.OptionsView.ShowHorizontalLines = DevExpress.Utils.DefaultBoolean.False;
-            this.gridView1.OptionsView.ShowIndicator = false;
-            this.gridView1.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.False;
-            this.gridView1.OptionsView.WaitAnimationOptions = DevExpress.XtraEditors.WaitAnimationOptions.Indicator;
             // 
             // gdetailPanel
             // 
@@ -506,76 +482,6 @@
             this.controlContainer1.Name = "controlContainer1";
             this.controlContainer1.Size = new System.Drawing.Size(192, 158);
             this.controlContainer1.TabIndex = 0;
-            // 
-            // stdsPanel
-            // 
-            this.stdsPanel.Controls.Add(this.dockPanel3_Container);
-            this.stdsPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right;
-            this.stdsPanel.ID = new System.Guid("3f831cc1-a0f7-4b9c-a1dc-47279b2509b2");
-            this.stdsPanel.Location = new System.Drawing.Point(1003, 83);
-            this.stdsPanel.Name = "stdsPanel";
-            this.stdsPanel.OriginalSize = new System.Drawing.Size(403, 200);
-            this.stdsPanel.Size = new System.Drawing.Size(403, 423);
-            this.stdsPanel.Text = "STDS";
-            // 
-            // dockPanel3_Container
-            // 
-            this.dockPanel3_Container.Controls.Add(this.navBarControl1);
-            this.dockPanel3_Container.Location = new System.Drawing.Point(5, 38);
-            this.dockPanel3_Container.Name = "dockPanel3_Container";
-            this.dockPanel3_Container.Size = new System.Drawing.Size(394, 381);
-            this.dockPanel3_Container.TabIndex = 0;
-            // 
-            // navBarControl1
-            // 
-            this.navBarControl1.ActiveGroup = this.navBarGroup1;
-            this.navBarControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.navBarControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
-            this.navBarGroup1});
-            this.navBarControl1.HotTrackedItemCursor = System.Windows.Forms.Cursors.Default;
-            this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
-            this.navBarItem1,
-            this.navBarItem2,
-            this.navBarItem3});
-            this.navBarControl1.LinkSelectionMode = DevExpress.XtraNavBar.LinkSelectionModeType.OneInControl;
-            this.navBarControl1.Location = new System.Drawing.Point(0, 0);
-            this.navBarControl1.Name = "navBarControl1";
-            this.navBarControl1.OptionsNavPane.ExpandedWidth = 394;
-            this.navBarControl1.OptionsNavPane.ShowExpandButton = false;
-            this.navBarControl1.OptionsNavPane.ShowHeaderText = false;
-            this.navBarControl1.OptionsNavPane.ShowOverflowPanel = false;
-            this.navBarControl1.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
-            this.navBarControl1.Size = new System.Drawing.Size(394, 381);
-            this.navBarControl1.SkinExplorerBarViewScrollStyle = DevExpress.XtraNavBar.SkinExplorerBarViewScrollStyle.Buttons;
-            this.navBarControl1.StoreDefaultPaintStyleName = true;
-            this.navBarControl1.TabIndex = 0;
-            this.navBarControl1.Text = "navBarControl1";
-            // 
-            // navBarGroup1
-            // 
-            this.navBarGroup1.Caption = "16-10";
-            this.navBarGroup1.Expanded = true;
-            this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem2),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem3)});
-            this.navBarGroup1.Name = "navBarGroup1";
-            // 
-            // navBarItem1
-            // 
-            this.navBarItem1.Caption = "navBarItem1";
-            this.navBarItem1.Name = "navBarItem1";
-            // 
-            // navBarItem2
-            // 
-            this.navBarItem2.Caption = "navBarItem2";
-            this.navBarItem2.Name = "navBarItem2";
-            // 
-            // navBarItem3
-            // 
-            this.navBarItem3.Caption = "navBarItem3";
-            this.navBarItem3.Name = "navBarItem3";
             // 
             // stddtlPanel
             // 
@@ -770,6 +676,135 @@
             this.colOptionsLayout.Visible = true;
             this.colOptionsLayout.VisibleIndex = 15;
             // 
+            // stdsPanel
+            // 
+            this.stdsPanel.Controls.Add(this.dockPanel3_Container);
+            this.stdsPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right;
+            this.stdsPanel.ID = new System.Guid("3f831cc1-a0f7-4b9c-a1dc-47279b2509b2");
+            this.stdsPanel.Location = new System.Drawing.Point(1003, 83);
+            this.stdsPanel.Name = "stdsPanel";
+            this.stdsPanel.OriginalSize = new System.Drawing.Size(403, 200);
+            this.stdsPanel.Size = new System.Drawing.Size(403, 423);
+            this.stdsPanel.Text = "STDS";
+            // 
+            // dockPanel3_Container
+            // 
+            this.dockPanel3_Container.Controls.Add(this.navBarControl1);
+            this.dockPanel3_Container.Location = new System.Drawing.Point(5, 38);
+            this.dockPanel3_Container.Name = "dockPanel3_Container";
+            this.dockPanel3_Container.Size = new System.Drawing.Size(394, 381);
+            this.dockPanel3_Container.TabIndex = 0;
+            // 
+            // navBarControl1
+            // 
+            this.navBarControl1.ActiveGroup = this.navBarGroup1;
+            this.navBarControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.navBarControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
+            this.navBarGroup1});
+            this.navBarControl1.HotTrackedItemCursor = System.Windows.Forms.Cursors.Default;
+            this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
+            this.navBarItem1,
+            this.navBarItem2,
+            this.navBarItem3});
+            this.navBarControl1.LinkSelectionMode = DevExpress.XtraNavBar.LinkSelectionModeType.OneInControl;
+            this.navBarControl1.Location = new System.Drawing.Point(0, 0);
+            this.navBarControl1.Name = "navBarControl1";
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 394;
+            this.navBarControl1.OptionsNavPane.ShowExpandButton = false;
+            this.navBarControl1.OptionsNavPane.ShowHeaderText = false;
+            this.navBarControl1.OptionsNavPane.ShowOverflowPanel = false;
+            this.navBarControl1.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
+            this.navBarControl1.Size = new System.Drawing.Size(394, 381);
+            this.navBarControl1.SkinExplorerBarViewScrollStyle = DevExpress.XtraNavBar.SkinExplorerBarViewScrollStyle.Buttons;
+            this.navBarControl1.StoreDefaultPaintStyleName = true;
+            this.navBarControl1.TabIndex = 0;
+            this.navBarControl1.Text = "navBarControl1";
+            // 
+            // navBarGroup1
+            // 
+            this.navBarGroup1.Caption = "16-10";
+            this.navBarGroup1.Expanded = true;
+            this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem2),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem3)});
+            this.navBarGroup1.Name = "navBarGroup1";
+            // 
+            // navBarItem1
+            // 
+            this.navBarItem1.Caption = "navBarItem1";
+            this.navBarItem1.Name = "navBarItem1";
+            // 
+            // navBarItem2
+            // 
+            this.navBarItem2.Caption = "navBarItem2";
+            this.navBarItem2.Name = "navBarItem2";
+            // 
+            // navBarItem3
+            // 
+            this.navBarItem3.Caption = "navBarItem3";
+            this.navBarItem3.Name = "navBarItem3";
+            // 
+            // barButtonItem9
+            // 
+            this.barButtonItem9.Caption = "refresh all";
+            this.barButtonItem9.Id = 24;
+            this.barButtonItem9.Name = "barButtonItem9";
+            this.barButtonItem9.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem9_ItemClick);
+            // 
+            // navBarControl2
+            // 
+            this.navBarControl2.ActiveGroup = this.navBarGroup2;
+            this.navBarControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.navBarControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.navBarControl2.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
+            this.navBarGroup2});
+            this.navBarControl2.HideGroupCaptions = true;
+            this.navBarControl2.HotTrackedItemCursor = System.Windows.Forms.Cursors.Default;
+            this.navBarControl2.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
+            this.navBarItem4,
+            this.navBarItem5,
+            this.navBarItem6});
+            this.navBarControl2.LinkSelectionMode = DevExpress.XtraNavBar.LinkSelectionModeType.OneInControl;
+            this.navBarControl2.Location = new System.Drawing.Point(0, 0);
+            this.navBarControl2.Name = "navBarControl2";
+            this.navBarControl2.OptionsNavPane.ExpandedWidth = 227;
+            this.navBarControl2.OptionsNavPane.ShowExpandButton = false;
+            this.navBarControl2.OptionsNavPane.ShowHeaderText = false;
+            this.navBarControl2.OptionsNavPane.ShowOverflowButton = false;
+            this.navBarControl2.OptionsNavPane.ShowOverflowPanel = false;
+            this.navBarControl2.OptionsNavPane.ShowSplitter = false;
+            this.navBarControl2.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
+            this.navBarControl2.Size = new System.Drawing.Size(227, 381);
+            this.navBarControl2.SkinExplorerBarViewScrollStyle = DevExpress.XtraNavBar.SkinExplorerBarViewScrollStyle.Buttons;
+            this.navBarControl2.StoreDefaultPaintStyleName = true;
+            this.navBarControl2.TabIndex = 1;
+            this.navBarControl2.Text = "navBarControl2";
+            this.navBarControl2.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarControl2_LinkClicked);
+            // 
+            // navBarGroup2
+            // 
+            this.navBarGroup2.Caption = "16-10";
+            this.navBarGroup2.Expanded = true;
+            this.navBarGroup2.Name = "navBarGroup2";
+            this.navBarGroup2.NavigationPaneVisible = false;
+            // 
+            // navBarItem4
+            // 
+            this.navBarItem4.Caption = "navBarItem1";
+            this.navBarItem4.Name = "navBarItem4";
+            // 
+            // navBarItem5
+            // 
+            this.navBarItem5.Caption = "navBarItem2";
+            this.navBarItem5.Name = "navBarItem5";
+            // 
+            // navBarItem6
+            // 
+            this.navBarItem6.Caption = "navBarItem3";
+            this.navBarItem6.Name = "navBarItem6";
+            // 
             // rwrkmain
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -778,6 +813,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1406, 527);
             this.Controls.Add(this.backstageViewControl1);
+            this.Controls.Add(this.groupsPanel);
             this.Controls.Add(this.stdsPanel);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
@@ -793,18 +829,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
             this.groupsPanel.ResumeLayout(false);
             this.dockPanel1_Container.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.gdetailPanel.ResumeLayout(false);
-            this.stdsPanel.ResumeLayout(false);
-            this.dockPanel3_Container.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             this.stddtlPanel.ResumeLayout(false);
             this.controlContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cardView1)).EndInit();
+            this.stdsPanel.ResumeLayout(false);
+            this.dockPanel3_Container.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControl2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -823,8 +858,6 @@
         private DevExpress.XtraBars.Docking.DockManager dockManager1;
         private DevExpress.XtraBars.Docking.DockPanel groupsPanel;
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel1_Container;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraBars.BarStaticItem barStaticItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
@@ -880,5 +913,11 @@
         private DevExpress.XtraGrid.Columns.GridColumn colUseSnappingEmulation;
         private DevExpress.XtraGrid.Columns.GridColumn colAllowResetLayout;
         private DevExpress.XtraGrid.Columns.GridColumn colOptionsLayout;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem9;
+        private DevExpress.XtraNavBar.NavBarControl navBarControl2;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem4;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem5;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem6;
     }
 }

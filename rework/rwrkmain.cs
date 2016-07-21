@@ -8,6 +8,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DevExpress.XtraNavBar;
+using LiteDB;
+using rework.classes;
 using rework.controls;
 
 namespace rework
@@ -113,6 +116,33 @@ namespace rework
 
         private void gridControl2_Click(object sender, EventArgs e)
         {
+             
+        }
+        public class groupq
+        {
+            public string num { get; set; }
+        }
+
+        private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            using (var db = new LiteDatabase("mydb.db"))
+            {
+                var coll = db.GetCollection<groupq>("groupcoll");
+                var results = new BindingList<groupq>(coll.Find(Query.All()).ToList());
+                navBarControl1.Groups[0].ItemLinks.Clear();
+                foreach (groupq t in results)
+                {
+                    var indexitem = navBarControl2.Items.Add();
+                    indexitem.Caption = t.num;
+                    navBarControl2.Groups[0].ItemLinks.Add(indexitem);
+                }
+                //gridControl1.DataSource = results;
+            }
+        }
+
+        private void navBarControl2_LinkClicked(object sender, NavBarLinkEventArgs e)
+        {
+            barStaticItem5.Caption = navBarControl2.SelectedLink.Caption;
 
         }
     }
