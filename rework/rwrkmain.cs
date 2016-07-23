@@ -63,6 +63,16 @@ namespace rework
         private void barCheckItem4_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             ribbonPageCategory1.Visible = schedcheckButt.Checked;
+            if (schedcheckButt.Checked)
+            {
+                schedPanel.DockedAsTabbedDocument = true;
+                schedPanel.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
+            }
+                
+            else
+            {
+                schedPanel.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
+            }
         }
 
         private void ribbonControl1_SelectedPageChanged(object sender, EventArgs e)
@@ -101,7 +111,7 @@ namespace rework
 
         private void gdtlcheckButt_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            gdetailPanel.Visible = gdtlcheckButt.Checked;
+            //gdetailPanel.Visible = gdtlcheckButt.Checked;
         }
 
         private void stddtlPanel_Click(object sender, EventArgs e)
@@ -129,7 +139,7 @@ namespace rework
             {
                 var coll = db.GetCollection<groupq>("groupcoll");
                 var results = new BindingList<groupq>(coll.Find(Query.All()).ToList());
-                navBarControl1.Groups[0].ItemLinks.Clear();
+                navBarControl2.Groups[0].ItemLinks.Clear();
                 foreach (groupq t in results)
                 {
                     var indexitem = navBarControl2.Items.Add();
@@ -143,6 +153,26 @@ namespace rework
         private void navBarControl2_LinkClicked(object sender, NavBarLinkEventArgs e)
         {
             barStaticItem5.Caption = navBarControl2.SelectedLink.Caption;
+
+        }
+
+        private void schedPanel_ClosedPanel(object sender, DevExpress.XtraBars.Docking.DockPanelEventArgs e)
+        {
+            schedcheckButt.Checked = false;
+        }
+
+        private void barButtonItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void barCheckItem4_CheckedChanged_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
 
         }
     }
