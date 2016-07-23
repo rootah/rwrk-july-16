@@ -119,6 +119,8 @@
             this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem5 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem6 = new DevExpress.XtraNavBar.NavBarItem();
+            this.schedv2 = new DevExpress.XtraBars.Docking.DockPanel();
+            this.controlContainer4 = new DevExpress.XtraBars.Docking.ControlContainer();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageViewControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer2)).BeginInit();
@@ -143,6 +145,7 @@
             this.groupsPanel.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl2)).BeginInit();
+            this.schedv2.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -540,7 +543,8 @@
             this.schedPanel});
             this.dockManager1.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
             this.stdsPanel,
-            this.groupsPanel});
+            this.groupsPanel,
+            this.schedv2});
             this.dockManager1.TopZIndexControls.AddRange(new string[] {
             "DevExpress.XtraBars.BarDockControl",
             "DevExpress.XtraBars.StandaloneBarDockControl",
@@ -958,6 +962,28 @@
             this.navBarItem6.Caption = "navBarItem3";
             this.navBarItem6.Name = "navBarItem6";
             // 
+            // schedv2
+            // 
+            this.schedv2.Controls.Add(this.controlContainer4);
+            this.schedv2.Dock = DevExpress.XtraBars.Docking.DockingStyle.Float;
+            this.schedv2.FloatLocation = new System.Drawing.Point(420, 220);
+            this.schedv2.FloatSize = new System.Drawing.Size(907, 499);
+            this.schedv2.ID = new System.Guid("4a9a23dc-16ba-4181-9fd7-dba8d0e7d0e6");
+            this.schedv2.Location = new System.Drawing.Point(0, 0);
+            this.schedv2.Name = "schedv2";
+            this.schedv2.Options.ShowAutoHideButton = false;
+            this.schedv2.Options.ShowMaximizeButton = false;
+            this.schedv2.OriginalSize = new System.Drawing.Size(200, 200);
+            this.schedv2.Size = new System.Drawing.Size(907, 499);
+            this.schedv2.Text = "sched v2";
+            // 
+            // controlContainer4
+            // 
+            this.controlContainer4.Location = new System.Drawing.Point(4, 38);
+            this.controlContainer4.Name = "controlContainer4";
+            this.controlContainer4.Size = new System.Drawing.Size(899, 457);
+            this.controlContainer4.TabIndex = 0;
+            // 
             // rwrkmain
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -966,10 +992,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1406, 527);
             this.Controls.Add(this.backstageViewControl1);
+            this.Controls.Add(this.popupControlContainer2);
             this.Controls.Add(this.groupsPanel);
             this.Controls.Add(this.stdsPanel);
             this.Controls.Add(this.ribbonStatusBar1);
-            this.Controls.Add(this.popupControlContainer2);
             this.Controls.Add(this.ribbonControl1);
             this.Name = "rwrkmain";
             this.Ribbon = this.ribbonControl1;
@@ -1003,6 +1029,7 @@
             this.groupsPanel.ResumeLayout(false);
             this.dockPanel1_Container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl2)).EndInit();
+            this.schedv2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1092,5 +1119,7 @@
         private DevExpress.XtraEditors.DateEdit dateEdit1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraBars.BarButtonGroup barButtonGroup1;
+        private DevExpress.XtraBars.Docking.DockPanel schedv2;
+        private DevExpress.XtraBars.Docking.ControlContainer controlContainer4;
     }
 }
