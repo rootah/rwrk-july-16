@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
+using System.Globalization;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraNavBar;
+using DevExpress.XtraScheduler;
+using DevExpress.XtraScheduler.Internal.Implementations;
 using LiteDB;
-using rework.classes;
 using rework.controls;
 
 namespace rework
@@ -65,28 +63,15 @@ namespace rework
             ribbonPageCategory1.Visible = schedcheckButt.Checked;
             if (schedcheckButt.Checked)
             {
-                schedPanel.DockedAsTabbedDocument = true;
-                schedPanel.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
+                schedPanelV2.DockedAsTabbedDocument = true;
+                schedPanelV2.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
             }
                 
             else
             {
-                schedPanel.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
+                schedPanelV2.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
             }
         }
-
-        private void ribbonControl1_SelectedPageChanged(object sender, EventArgs e)
-        {
-            //barStaticItem5.Caption = ribbonControl1.SelectedPage.Text == @"display" ? @"display" : @"...";
-            //checkPaneState();
-        }
-
-        //private void checkPaneState()
-        //{
-        //    groupsPanel.Visible = groupscheckButt.Checked;
-        //    stdsPanel.Visible = stdscheckButt.Checked;
-        //    ribbonPageCategory1.Visible = schedcheckButt.Checked;
-        //}
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -109,16 +94,6 @@ namespace rework
             Close();
         }
 
-        private void gdtlcheckButt_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            //gdetailPanel.Visible = gdtlcheckButt.Checked;
-        }
-
-        private void stddtlPanel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void stdtlscheckButt_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             stddtlPanel.Visible = stdtlscheckButt.Checked;
@@ -131,6 +106,9 @@ namespace rework
         public class groupq
         {
             public string num { get; set; }
+            public string time { get; set; }
+            public string hcnt { get; set; }
+            public DateTime startdate { get; set; }
         }
 
         private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -138,6 +116,7 @@ namespace rework
             using (var db = new LiteDatabase("mydb.db"))
             {
                 var coll = db.GetCollection<groupq>("groupcoll");
+
                 var results = new BindingList<groupq>(coll.Find(Query.All()).ToList());
                 navBarControl2.Groups[0].ItemLinks.Clear();
                 foreach (groupq t in results)
@@ -146,34 +125,64 @@ namespace rework
                     indexitem.Caption = t.num;
                     navBarControl2.Groups[0].ItemLinks.Add(indexitem);
                 }
-                //gridControl1.DataSource = results;
+
+                navBarControl2.Groups[0].Caption = @" total groups count: " + coll.Count();
             }
         }
 
         private void navBarControl2_LinkClicked(object sender, NavBarLinkEventArgs e)
         {
             barStaticItem5.Caption = navBarControl2.SelectedLink.Caption;
-
         }
 
-        private void schedPanel_ClosedPanel(object sender, DevExpress.XtraBars.Docking.DockPanelEventArgs e)
+        private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            schedcheckButt.Checked = false;
+            var no = navBarGroup2.SelectedLink.Caption;
+            using (var db = new LiteDatabase("mydb.db"))
+            {
+                var coll = db.GetCollection<groupq>("groupcoll");
+                var results = new BindingList<groupq>(coll.Find(x => x.num == no).ToList());
+                gridControl1.DataSource = results;
+                foreach (groupq t in results)
+                {
+                    //var appt = schedulerControl1.Storage.CreateAppointment(AppointmentType.Normal);
+                    //appt.Start = t.startdate.Date + t.time.TimeOfDay;
+                    //appt.End = appt.Start.AddMinutes(Convert.ToInt32(t.hcnt));
+                    //appt.Subject = t.num;
+                    //schedulerControl1.Storage.Appointments.Add(appt);
+                }
+                //MessageBox.Show(text: results.ToString(CultureInfo.InvariantCulture));
+            }
+
+            //var apt = schedulerControl1.Storage.CreateAppointment(AppointmentType.Pattern);
+            //apt.Start = DateTime.Today.AddHours(9);
+            //apt.End = apt.Start.AddMinutes(15);
+            //apt.Subject = "My Subject";
+            //apt.Location = "My Location";
+            //apt.Description = "My Description";
+
+            //apt.RecurrenceInfo.Type = RecurrenceType.Weekly;
+            //apt.RecurrenceInfo.Start = apt.Start;
+            //apt.RecurrenceInfo.Periodicity = 1;
+            //apt.RecurrenceInfo.WeekDays = WeekDays.Friday | WeekDays.Wednesday;
+            //apt.RecurrenceInfo.Range = RecurrenceRange.OccurrenceCount;
+            //apt.RecurrenceInfo.OccurrenceCount = 12;
+
+            //Appointment apt = schedulerControl1.Storage.CreateAppointment(AppointmentType.Normal);
+            //apt.Start = DateTime.Today.AddHours(12);
+            //apt.Duration = TimeSpan.FromHours(10);
+            //apt.Subject = "Subject";
+            //apt.Description = "Description";
+            //schedulerControl1.Storage.Appointments.Add(apt);
         }
 
-        private void barButtonItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
-        }
-
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void barCheckItem4_CheckedChanged_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-
-        }
-    }
+            var no = navBarGroup2.SelectedLink.Caption;
+            using (var db = new LiteDatabase("mydb.db"))
+            {
+                var coll = db.GetCollection<groupq>("groupcoll");
+                var results = coll.Delete(x => x.num == no);
+            }
+        }}
 }

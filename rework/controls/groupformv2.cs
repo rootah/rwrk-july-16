@@ -1,4 +1,5 @@
-﻿using LiteDB;
+﻿using System;
+using LiteDB;
 using rework.classes;
 
 namespace rework.controls
@@ -16,10 +17,17 @@ namespace rework.controls
 
         private void okBtn_Click(object sender, System.EventArgs e)
         {
+            var myDate = DateTime.ParseExact(startdate.DateTime.ToShortDateString().ToString() + " " + time.Time.TimeOfDay.ToString(),
+                    "yyyy-MM-dd HH:mm", System.Globalization.CultureInfo.InvariantCulture);
             using (var db = new LiteDatabase("mydb.db"))
             {
                 var col = db.GetCollection("groupcoll");
-                col.Insert(new BsonDocument().Add("_id", new ObjectId(ObjectId.NewObjectId())).Add("num", num.Text));
+                col.Insert(new BsonDocument()
+                    .Add("_id", new ObjectId(ObjectId.NewObjectId()))
+                    .Add("num", num.Text)
+                    .Add("time", time.Time.ToShortTimeString())
+                    .Add("hcnt", hcnt.Text)
+                    .Add("startdate", myDate));
                 col.EnsureIndex("num");
 
                 // Now, search for document your document
