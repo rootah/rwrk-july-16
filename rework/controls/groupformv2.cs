@@ -1,5 +1,4 @@
 ﻿using System;
-using LiteDB;
 using rework.classes;
 
 namespace rework.controls
@@ -19,20 +18,20 @@ namespace rework.controls
         {
             var myDate = DateTime.ParseExact(startdate.DateTime.ToShortDateString().ToString() + " " + time.Time.TimeOfDay.ToString(),
                     "yyyy-MM-dd HH:mm", System.Globalization.CultureInfo.InvariantCulture);
-            using (var db = new LiteDatabase("mydb.db"))
-            {
-                var col = db.GetCollection("groupcoll");
-                col.Insert(new BsonDocument()
-                    .Add("_id", new ObjectId(ObjectId.NewObjectId()))
-                    .Add("num", num.Text)
-                    .Add("time", time.Time.ToShortTimeString())
-                    .Add("hcnt", hcnt.Text)
-                    .Add("startdate", myDate));
-                col.EnsureIndex("num");
+            //using (var db = new LiteDatabase("mydb.db"))
+            //{
+            //    var col = db.GetCollection("groupcoll");
+            //    col.Insert(new BsonDocument()
+            //        .Add("_id", new ObjectId(ObjectId.NewObjectId()))
+            //        .Add("num", num.Text)
+            //        .Add("time", time.Time.ToShortTimeString())
+            //        .Add("hcnt", hcnt.Text)
+            //        .Add("startdate", myDate));
+            //    col.EnsureIndex("num");
 
-                // Now, search for document your document
-                //var customer = col.FindOne(Query.EQ("Name", "john doe"));
-            }
+            //    // Now, search for document your document
+            //    //var customer = col.FindOne(Query.EQ("Name", "john doe"));
+            //}
         }
 
         //    private void init()

@@ -8,7 +8,6 @@ using DevExpress.XtraEditors;
 using DevExpress.XtraNavBar;
 using DevExpress.XtraScheduler;
 using DevExpress.XtraScheduler.Internal.Implementations;
-using LiteDB;
 using rework.controls;
 
 namespace rework
@@ -113,21 +112,21 @@ namespace rework
 
         private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            using (var db = new LiteDatabase("mydb.db"))
-            {
-                var coll = db.GetCollection<groupq>("groupcoll");
+            //using (var db = new LiteDatabase("mydb.db"))
+            //{
+            //    var coll = db.GetCollection<groupq>("groupcoll");
 
-                var results = new BindingList<groupq>(coll.Find(Query.All()).ToList());
-                navBarControl2.Groups[0].ItemLinks.Clear();
-                foreach (groupq t in results)
-                {
-                    var indexitem = navBarControl2.Items.Add();
-                    indexitem.Caption = t.num;
-                    navBarControl2.Groups[0].ItemLinks.Add(indexitem);
-                }
+            //    var results = new BindingList<groupq>(coll.Find(Query.All()).ToList());
+            //    navBarControl2.Groups[0].ItemLinks.Clear();
+            //    foreach (groupq t in results)
+            //    {
+            //        var indexitem = navBarControl2.Items.Add();
+            //        indexitem.Caption = t.num;
+            //        navBarControl2.Groups[0].ItemLinks.Add(indexitem);
+            //    }
 
-                navBarControl2.Groups[0].Caption = @" total groups count: " + coll.Count();
-            }
+            //    navBarControl2.Groups[0].Caption = @" total groups count: " + coll.Count();
+            //}
         }
 
         private void navBarControl2_LinkClicked(object sender, NavBarLinkEventArgs e)
@@ -138,21 +137,21 @@ namespace rework
         private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var no = navBarGroup2.SelectedLink.Caption;
-            using (var db = new LiteDatabase("mydb.db"))
-            {
-                var coll = db.GetCollection<groupq>("groupcoll");
-                var results = new BindingList<groupq>(coll.Find(x => x.num == no).ToList());
-                gridControl1.DataSource = results;
-                foreach (groupq t in results)
-                {
-                    //var appt = schedulerControl1.Storage.CreateAppointment(AppointmentType.Normal);
-                    //appt.Start = t.startdate.Date + t.time.TimeOfDay;
-                    //appt.End = appt.Start.AddMinutes(Convert.ToInt32(t.hcnt));
-                    //appt.Subject = t.num;
-                    //schedulerControl1.Storage.Appointments.Add(appt);
-                }
-                //MessageBox.Show(text: results.ToString(CultureInfo.InvariantCulture));
-            }
+            //using (var db = new LiteDatabase("mydb.db"))
+            //{
+            //    var coll = db.GetCollection<groupq>("groupcoll");
+            //    var results = new BindingList<groupq>(coll.Find(x => x.num == no).ToList());
+            //    gridControl1.DataSource = results;
+            //    foreach (groupq t in results)
+            //    {
+            //        //var appt = schedulerControl1.Storage.CreateAppointment(AppointmentType.Normal);
+            //        //appt.Start = t.startdate.Date + t.time.TimeOfDay;
+            //        //appt.End = appt.Start.AddMinutes(Convert.ToInt32(t.hcnt));
+            //        //appt.Subject = t.num;
+            //        //schedulerControl1.Storage.Appointments.Add(appt);
+            //    }
+            //    //MessageBox.Show(text: results.ToString(CultureInfo.InvariantCulture));
+            //}
 
             //var apt = schedulerControl1.Storage.CreateAppointment(AppointmentType.Pattern);
             //apt.Start = DateTime.Today.AddHours(9);
@@ -179,10 +178,10 @@ namespace rework
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var no = navBarGroup2.SelectedLink.Caption;
-            using (var db = new LiteDatabase("mydb.db"))
-            {
-                var coll = db.GetCollection<groupq>("groupcoll");
-                var results = coll.Delete(x => x.num == no);
-            }
+            //using (var db = new LiteDatabase("mydb.db"))
+            //{
+            //    var coll = db.GetCollection<groupq>("groupcoll");
+            //    var results = coll.Delete(x => x.num == no);
+            //}
         }}
 }
