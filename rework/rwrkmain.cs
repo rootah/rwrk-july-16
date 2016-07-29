@@ -10,10 +10,17 @@ using DevExpress.XtraScheduler;
 using DevExpress.XtraScheduler.Internal.Implementations;
 using rework.controls;
 
+using RethinkDb.Driver.Net.Clustering;
+using RethinkDb.Driver;
+using DevExpress.XtraBars.Docking;
+
 namespace rework
 {
+    
     public partial class rwrkmain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        public static RethinkDB R = RethinkDB.R;
+
         public rwrkmain()
         {
             InitializeComponent();
@@ -183,5 +190,43 @@ namespace rework
             //    var coll = db.GetCollection<groupq>("groupcoll");
             //    var results = coll.Delete(x => x.num == no);
             //}
-        }}
+        }
+
+        
+        private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            var conn = R.ConnectionPool()
+            .Seed(new[] { "192.168.0.111:28015", "192.168.0.198:28015" })
+            .PoolingStrategy(new RoundRobinHostPool())
+            .Discover(true)
+            .Connect();
+
+            var result = R.Now().Run<DateTimeOffset>(conn);
+            MessageBox.Show(result.ToString());
+        }
+
+        private void barButtonItem11_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            groupformv2 gf = new groupformv2(this);
+            gf.Dock = DockStyle.Fill;
+
+
+            
+
+            DockPanel gpanel = dockManager1.AddPanel(DockingStyle.Float);
+            gpanel.Text = "adding group..";
+            gpanel.Options.ShowMaximizeButton = false;
+            gpanel.Options.ShowAutoHideButton = false;
+            gpanel.Options.ResizeDirection = DevExpress.XtraBars.Docking.Helpers.ResizeDirection.None;
+            gpanel.ControlContainer.Controls.Add(gf);
+            gpanel.FloatSize = new Size(gf.layoutControl1.Root.MinSize.Width, gf.layoutControl1.Root.MinSize.Height);
+
+            int x = (Left + Right - gpanel.FloatSize.Width) / 2;
+            int y = (Top + Bottom - gpanel.FloatSize.Height) / 2;
+            gpanel.FloatLocation = new Point(x, y);
+
+            gpanel.Visibility = DockVisibility.Visible;
+
+        }
+    }
 }

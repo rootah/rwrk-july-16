@@ -118,6 +118,7 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(548, 193, 598, 493);
             this.layoutControl1.OptionsFocus.AllowFocusGroups = false;
+            this.layoutControl1.OptionsView.DrawItemBorders = true;
             this.layoutControl1.Root = this.layoutControlGroup1;
             this.layoutControl1.Size = new System.Drawing.Size(246, 479);
             this.layoutControl1.TabIndex = 0;
