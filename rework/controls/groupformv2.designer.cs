@@ -111,7 +111,7 @@
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
-            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(586, 313, 598, 350);
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(586, 313, 598, 447);
             this.layoutControl1.OptionsFocus.AllowFocusGroups = false;
             this.layoutControl1.Root = this.layoutControlGroup1;
             this.layoutControl1.Size = new System.Drawing.Size(246, 479);
@@ -453,7 +453,8 @@
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.Location = new System.Drawing.Point(0, 389);
-            this.emptySpaceItem3.MinSize = new System.Drawing.Size(225, 10);
+            this.emptySpaceItem3.MaxSize = new System.Drawing.Size(226, 0);
+            this.emptySpaceItem3.MinSize = new System.Drawing.Size(226, 10);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
             this.emptySpaceItem3.Size = new System.Drawing.Size(226, 43);
             this.emptySpaceItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
@@ -472,6 +473,7 @@
             this.layoutControlGroup2.Size = new System.Drawing.Size(226, 88);
             this.layoutControlGroup2.Text = "stats";
             this.layoutControlGroup2.TextVisible = false;
+            this.layoutControlGroup2.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // layoutControlItem11
             // 
@@ -519,6 +521,7 @@
             this.layoutControlItem1.Spacing = new DevExpress.XtraLayout.Utils.Padding(10, 0, 0, 0);
             this.layoutControlItem1.Text = "ID";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(69, 13);
+            this.layoutControlItem1.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // simpleSeparator2
             // 

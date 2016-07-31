@@ -7,11 +7,15 @@ using System.Text;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraBars.Docking;
 using DevExpress.XtraEditors;
 using DevExpress.XtraNavBar;
 using LiteDB;
 using rework.classes;
 using rework.controls;
+
+                                 // todoski
+                                // todo need clean
 
 namespace rework
 {
@@ -109,25 +113,11 @@ namespace rework
             Close();
         }
 
-        private void gdtlcheckButt_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            //gdetailPanel.Visible = gdtlcheckButt.Checked;
-        }
-
-        private void stddtlPanel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void stdtlscheckButt_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             stddtlPanel.Visible = stdtlscheckButt.Checked;
         }
 
-        private void gridControl2_Click(object sender, EventArgs e)
-        {
-             
-        }
         public class groupq
         {
             public string num { get; set; }
@@ -146,7 +136,6 @@ namespace rework
                     indexitem.Caption = t.num;
                     navBarControl2.Groups[0].ItemLinks.Add(indexitem);
                 }
-                //gridControl1.DataSource = results;
             }
         }
 
@@ -161,19 +150,21 @@ namespace rework
             schedcheckButt.Checked = false;
         }
 
-        private void barButtonItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
-        }
-
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void barCheckItem4_CheckedChanged_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-
+            groupformv2 gf = new groupformv2(this);
+            gf.Dock = DockStyle.Fill;
+            var gpanel = dockManager1.AddPanel(DockingStyle.Float);
+            gpanel.Text = @"adding group..";
+            gpanel.Options.ShowMaximizeButton = false;
+            gpanel.Options.ShowAutoHideButton = false;
+            gpanel.Options.ResizeDirection = DevExpress.XtraBars.Docking.Helpers.ResizeDirection.All;
+            gpanel.ControlContainer.Controls.Add(gf);
+            gpanel.FloatSize = new Size(gf.layoutControl1.Root.MinSize.Width + 20, gf.layoutControl1.Root.MinSize.Height + 50);
+            var x = (Left + Right - gpanel.FloatSize.Width) / 2;
+            var y = (Top + Bottom - gpanel.FloatSize.Height) / 2;
+            gpanel.FloatLocation = new Point(x, y);
+            gpanel.Visibility = DockVisibility.Visible;
         }
     }
 }
