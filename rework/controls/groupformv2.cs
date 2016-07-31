@@ -1,10 +1,19 @@
 ﻿using System;
 using rework.classes;
+using RethinkDb.Driver;
+using RethinkDb.Driver.Ast;
+using RethinkDb.Driver.Model;
+using RethinkDb.Driver.Net;
 
 namespace rework.controls
 {
     public partial class groupformv2 : DevExpress.XtraEditors.XtraUserControl
     {
+        private static readonly RethinkDB R = RethinkDB.R;
+        public const string DbName = "ge_initdb";
+        public const string TableName = "groups";
+        public static Table table = R.Db(DbName).Table(TableName);
+        private Connection conn;
         private readonly rwrkmain _mForm;
 
         public groupformv2(rwrkmain mForm)
@@ -14,10 +23,21 @@ namespace rework.controls
             //init();
         }
 
+        public static Connection.Builder DefaultConnectionBuilder()
+        {
+            return R.Connection()
+                .Hostname("127.0.0.1")
+                .Port(28015);
+        }
+
         private void okBtn_Click(object sender, System.EventArgs e)
         {
             var myDate = DateTime.ParseExact(startdate.DateTime.ToShortDateString().ToString() + " " + time.Time.TimeOfDay.ToString(),
                     "yyyy-MM-dd HH:mm", System.Globalization.CultureInfo.InvariantCulture);
+
+            var obj = new Foo { Bar = 1, Baz = 2, Tim = DateTimeOffset.Now };
+            Result result = R.Db(@"ge_initdb").Table(@"groups").Insert(obj).Run<Result>(conn);
+            
             //using (var db = new LiteDatabase("mydb.db"))
             //{
             //    var col = db.GetCollection("groupcoll");

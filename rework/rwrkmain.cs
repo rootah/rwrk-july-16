@@ -1,13 +1,8 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Drawing;
-using System.Globalization;
-using System.Linq;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraNavBar;
-using DevExpress.XtraScheduler;
-using DevExpress.XtraScheduler.Internal.Implementations;
 using rework.controls;
 
 using RethinkDb.Driver.Net.Clustering;
@@ -19,7 +14,7 @@ namespace rework
     
     public partial class rwrkmain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public static RethinkDB R = RethinkDB.R;
+        private static RethinkDB R = RethinkDB.R;
 
         public rwrkmain()
         {
@@ -70,12 +65,12 @@ namespace rework
             if (schedcheckButt.Checked)
             {
                 schedPanelV2.DockedAsTabbedDocument = true;
-                schedPanelV2.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
+                schedPanelV2.Visibility = DockVisibility.Visible;
             }
                 
             else
             {
-                schedPanelV2.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
+                schedPanelV2.Visibility = DockVisibility.Hidden;
             }
         }
 
@@ -143,7 +138,7 @@ namespace rework
 
         private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var no = navBarGroup2.SelectedLink.Caption;
+            //var no = navBarGroup2.SelectedLink.Caption;
             //using (var db = new LiteDatabase("mydb.db"))
             //{
             //    var coll = db.GetCollection<groupq>("groupcoll");
@@ -184,7 +179,7 @@ namespace rework
 
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            var no = navBarGroup2.SelectedLink.Caption;
+            //var no = navBarGroup2.SelectedLink.Caption;
             //using (var db = new LiteDatabase("mydb.db"))
             //{
             //    var coll = db.GetCollection<groupq>("groupcoll");
@@ -196,7 +191,7 @@ namespace rework
         private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var conn = R.ConnectionPool()
-            .Seed(new[] { "192.168.0.111:28015", "192.168.0.198:28015" })
+            .Seed("192.168.0.111:28015", "192.168.0.198:28015")
             .PoolingStrategy(new RoundRobinHostPool())
             .Discover(true)
             .Connect();
@@ -207,14 +202,13 @@ namespace rework
 
         private void barButtonItem11_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            groupformv2 gf = new groupformv2(this);
-            gf.Dock = DockStyle.Fill;
+            groupformv2 gf = new groupformv2(this) {Dock = DockStyle.Fill};
 
 
-            
 
-            DockPanel gpanel = dockManager1.AddPanel(DockingStyle.Float);
-            gpanel.Text = "adding group..";
+
+            var gpanel = dockManager1.AddPanel(DockingStyle.Float);
+            gpanel.Text = @"adding group..";
             gpanel.Options.ShowMaximizeButton = false;
             gpanel.Options.ShowAutoHideButton = false;
             gpanel.Options.ResizeDirection = DevExpress.XtraBars.Docking.Helpers.ResizeDirection.None;
