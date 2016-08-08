@@ -22,7 +22,7 @@ namespace rework
             InitializeComponent();
         }
 
-        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void newGroupBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var grp = new groupformv2(this);
             var newgroup = new XtraForm
@@ -40,7 +40,7 @@ namespace rework
             newgroup.ShowDialog(this);
         }
 
-        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void newStdBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var frm = new stdformv2();
             var newstd = new XtraForm
@@ -55,14 +55,13 @@ namespace rework
             newstd.ClientSize = new Size(frm.mainlayoutcontrol.Root.MinSize.Width, frm.mainlayoutcontrol.Root.MinSize.Height);
             newstd.StartPosition = FormStartPosition.CenterParent;
             newstd.Text = @"+ creating";
-
-            //frm.controlInit();
+            
             newstd.ShowDialog(this);
         }
 
         private void barCheckItem4_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            ribbonPageCategory1.Visible = schedcheckButt.Checked;
+            schedCategory.Visible = schedcheckButt.Checked;
             if (schedcheckButt.Checked)
             {
                 schedPanel.DockedAsTabbedDocument = true;
@@ -74,19 +73,6 @@ namespace rework
                 schedPanel.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
             }
         }
-
-        private void ribbonControl1_SelectedPageChanged(object sender, EventArgs e)
-        {
-            //barStaticItem5.Caption = ribbonControl1.SelectedPage.Text == @"display" ? @"display" : @"...";
-            //checkPaneState();
-        }
-
-        //private void checkPaneState()
-        //{
-        //    groupsPanel.Visible = groupscheckButt.Checked;
-        //    stdsPanel.Visible = stdscheckButt.Checked;
-        //    ribbonPageCategory1.Visible = schedcheckButt.Checked;
-        //}
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -109,25 +95,11 @@ namespace rework
             Close();
         }
 
-        private void gdtlcheckButt_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            //gdetailPanel.Visible = gdtlcheckButt.Checked;
-        }
-
-        private void stddtlPanel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void stdtlscheckButt_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             stddtlPanel.Visible = stdtlscheckButt.Checked;
         }
 
-        private void gridControl2_Click(object sender, EventArgs e)
-        {
-             
-        }
         public class groupq
         {
             public string num { get; set; }
@@ -146,34 +118,17 @@ namespace rework
                     indexitem.Caption = t.num;
                     navBarControl2.Groups[0].ItemLinks.Add(indexitem);
                 }
-                //gridControl1.DataSource = results;
             }
         }
 
         private void navBarControl2_LinkClicked(object sender, NavBarLinkEventArgs e)
         {
             barStaticItem5.Caption = navBarControl2.SelectedLink.Caption;
-
         }
 
         private void schedPanel_ClosedPanel(object sender, DevExpress.XtraBars.Docking.DockPanelEventArgs e)
         {
             schedcheckButt.Checked = false;
-        }
-
-        private void barButtonItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-
-        }
-
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void barCheckItem4_CheckedChanged_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-
         }
     }
 }
