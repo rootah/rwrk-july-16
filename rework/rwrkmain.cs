@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraNavBar;
 using LiteDB;
-using rework.classes;
 using rework.controls;
+
+// todo: prevent view menu closing on item press
 
 namespace rework
 {
@@ -129,6 +126,25 @@ namespace rework
         private void schedPanel_ClosedPanel(object sender, DevExpress.XtraBars.Docking.DockPanelEventArgs e)
         {
             schedcheckButt.Checked = false;
+        }
+
+        private void schedViewCheck_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            schedCategory.Visible = schedcheckButt.Checked;
+            if (schedViewCheck.Checked)
+            {
+                schedPanel.DockedAsTabbedDocument = true;
+                schedPanel.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
+            }
+
+            else
+            {
+                schedPanel.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
+            }
+
+            if (schedViewCheck.Checked)
+                schedCategory.Visible = true;
+            else schedCategory.Visible = false;
         }
     }
 }
