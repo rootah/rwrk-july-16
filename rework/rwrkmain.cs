@@ -1,21 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars.Docking;
 using DevExpress.XtraEditors;
 using DevExpress.XtraNavBar;
 using LiteDB;
-using rework.classes;
 using rework.controls;
 
+<<<<<<< HEAD
                                  // todoski
                                 // todo need clean
+=======
+// todo: prevent view menu closing on item press
+>>>>>>> refs/remotes/origin/master
 
 namespace rework
 {
@@ -26,7 +25,7 @@ namespace rework
             InitializeComponent();
         }
 
-        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void newGroupBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var grp = new groupformv2(this);
             var newgroup = new XtraForm
@@ -44,7 +43,7 @@ namespace rework
             newgroup.ShowDialog(this);
         }
 
-        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void newStdBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             var frm = new stdformv2();
             var newstd = new XtraForm
@@ -59,14 +58,13 @@ namespace rework
             newstd.ClientSize = new Size(frm.mainlayoutcontrol.Root.MinSize.Width, frm.mainlayoutcontrol.Root.MinSize.Height);
             newstd.StartPosition = FormStartPosition.CenterParent;
             newstd.Text = @"+ creating";
-
-            //frm.controlInit();
+            
             newstd.ShowDialog(this);
         }
 
         private void barCheckItem4_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            ribbonPageCategory1.Visible = schedcheckButt.Checked;
+            schedCategory.Visible = schedcheckButt.Checked;
             if (schedcheckButt.Checked)
             {
                 schedPanel.DockedAsTabbedDocument = true;
@@ -78,19 +76,6 @@ namespace rework
                 schedPanel.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
             }
         }
-
-        private void ribbonControl1_SelectedPageChanged(object sender, EventArgs e)
-        {
-            //barStaticItem5.Caption = ribbonControl1.SelectedPage.Text == @"display" ? @"display" : @"...";
-            //checkPaneState();
-        }
-
-        //private void checkPaneState()
-        //{
-        //    groupsPanel.Visible = groupscheckButt.Checked;
-        //    stdsPanel.Visible = stdscheckButt.Checked;
-        //    ribbonPageCategory1.Visible = schedcheckButt.Checked;
-        //}
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -142,7 +127,6 @@ namespace rework
         private void navBarControl2_LinkClicked(object sender, NavBarLinkEventArgs e)
         {
             barStaticItem5.Caption = navBarControl2.SelectedLink.Caption;
-
         }
 
         private void schedPanel_ClosedPanel(object sender, DevExpress.XtraBars.Docking.DockPanelEventArgs e)
@@ -150,6 +134,7 @@ namespace rework
             schedcheckButt.Checked = false;
         }
 
+<<<<<<< HEAD
         private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             groupformv2 gf = new groupformv2(this);
@@ -165,6 +150,25 @@ namespace rework
             var y = (Top + Bottom - gpanel.FloatSize.Height) / 2;
             gpanel.FloatLocation = new Point(x, y);
             gpanel.Visibility = DockVisibility.Visible;
+=======
+        private void schedViewCheck_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            schedCategory.Visible = schedcheckButt.Checked;
+            if (schedViewCheck.Checked)
+            {
+                schedPanel.DockedAsTabbedDocument = true;
+                schedPanel.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
+            }
+
+            else
+            {
+                schedPanel.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
+            }
+
+            if (schedViewCheck.Checked)
+                schedCategory.Visible = true;
+            else schedCategory.Visible = false;
+>>>>>>> refs/remotes/origin/master
         }
     }
 }

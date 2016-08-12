@@ -41,14 +41,14 @@
             this.backstageViewControl1 = new DevExpress.XtraBars.Ribbon.BackstageViewControl();
             this.backstageViewButtonItem1 = new DevExpress.XtraBars.Ribbon.BackstageViewButtonItem();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.newStdBtn = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
-            this.barStaticItem4 = new DevExpress.XtraBars.BarStaticItem();
+            this.panelsLabel = new DevExpress.XtraBars.BarStaticItem();
             this.groupscheckButt = new DevExpress.XtraBars.BarCheckItem();
             this.stdscheckButt = new DevExpress.XtraBars.BarCheckItem();
             this.schedcheckButt = new DevExpress.XtraBars.BarCheckItem();
@@ -66,15 +66,19 @@
             this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+<<<<<<< HEAD
             this.barButtonGroup1 = new DevExpress.XtraBars.BarButtonGroup();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+=======
+            this.newGroupBtn = new DevExpress.XtraBars.BarButtonItem();
+            this.schedCategory = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
+            this.schedPageCat = new DevExpress.XtraBars.Ribbon.RibbonPage();
+>>>>>>> refs/remotes/origin/master
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.peoplePage = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.peoplesBtnsGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.formAssistant1 = new DevExpress.XtraBars.FormAssistant();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
@@ -122,6 +126,18 @@
             this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem5 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem6 = new DevExpress.XtraNavBar.NavBarItem();
+<<<<<<< HEAD
+=======
+            this.ribbonMiniToolbar1 = new DevExpress.XtraBars.Ribbon.RibbonMiniToolbar(this.components);
+            this.bugBtn = new DevExpress.XtraBars.BarButtonItem();
+            this.viewMenu = new DevExpress.XtraBars.BarSubItem();
+            this.repositoryItemPopupContainerEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPopupContainerEdit();
+            this.groupViewCheck = new DevExpress.XtraBars.BarCheckItem();
+            this.stdViewCheck = new DevExpress.XtraBars.BarCheckItem();
+            this.schedViewCheck = new DevExpress.XtraBars.BarCheckItem();
+            this.dtlsViewCheck = new DevExpress.XtraBars.BarCheckItem();
+            this.viewBtnsGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+>>>>>>> refs/remotes/origin/master
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backstageViewControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupControlContainer2)).BeginInit();
@@ -147,24 +163,30 @@
             this.groupsPanel.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl2)).BeginInit();
+<<<<<<< HEAD
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupContainerEdit1)).BeginInit();
+>>>>>>> refs/remotes/origin/master
             this.SuspendLayout();
             // 
             // ribbonControl1
             // 
             this.ribbonControl1.ApplicationButtonDropDownControl = this.backstageViewControl1;
             this.ribbonControl1.ApplicationButtonText = "~";
+            this.ribbonControl1.DrawGroupCaptions = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbonControl1.DrawGroupsBorder = false;
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
             this.barStaticItem1,
-            this.barButtonItem2,
+            this.newStdBtn,
             this.barButtonItem3,
             this.barButtonItem4,
             this.barStaticItem2,
             this.barButtonItem5,
             this.barButtonItem6,
             this.barButtonItem7,
-            this.barStaticItem4,
+            this.panelsLabel,
             this.groupscheckButt,
             this.stdscheckButt,
             this.schedcheckButt,
@@ -176,25 +198,41 @@
             this.barCheckItem3,
             this.barStaticItem6,
             this.barButtonItem1,
+<<<<<<< HEAD
             this.barButtonGroup1,
             this.barButtonItem8});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.MaxItemId = 7;
+=======
+            this.newGroupBtn,
+            this.bugBtn,
+            this.viewMenu,
+            this.groupViewCheck,
+            this.stdViewCheck,
+            this.schedViewCheck,
+            this.dtlsViewCheck});
+            this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
+            this.ribbonControl1.MaxItemId = 9;
+            this.ribbonControl1.MiniToolbars.Add(this.ribbonMiniToolbar1);
+>>>>>>> refs/remotes/origin/master
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
-            this.ribbonPageCategory1});
+            this.schedCategory});
+            this.ribbonControl1.PageCategoryAlignment = DevExpress.XtraBars.Ribbon.RibbonPageCategoryAlignment.Right;
+            this.ribbonControl1.PageHeaderItemLinks.Add(this.bugBtn);
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage3,
-            this.ribbonPage1});
+            this.peoplePage});
+            this.ribbonControl1.PopupShowMode = DevExpress.XtraBars.PopupShowMode.Inplace;
+            this.ribbonControl1.QuickToolbarItemLinks.Add(this.bugBtn);
+            this.ribbonControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemPopupContainerEdit1});
             this.ribbonControl1.RibbonCaptionAlignment = DevExpress.XtraBars.Ribbon.RibbonCaptionAlignment.Right;
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.OfficeUniversal;
-            this.ribbonControl1.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl1.ShowQatLocationSelector = false;
             this.ribbonControl1.ShowToolbarCustomizeItem = false;
-            this.ribbonControl1.Size = new System.Drawing.Size(1406, 83);
+            this.ribbonControl1.Size = new System.Drawing.Size(1406, 80);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl1.Toolbar.ShowCustomizeItem = false;
-            this.ribbonControl1.SelectedPageChanged += new System.EventHandler(this.ribbonControl1_SelectedPageChanged);
             // 
             // backstageViewControl1
             // 
@@ -206,11 +244,11 @@
             this.backstageViewControl1.Items.Add(this.backstageViewButtonItem1);
             this.backstageViewControl1.LeftPaneMaxWidth = 111;
             this.backstageViewControl1.LeftPaneMinWidth = 111;
-            this.backstageViewControl1.Location = new System.Drawing.Point(963, 15);
+            this.backstageViewControl1.Location = new System.Drawing.Point(963, 12);
             this.backstageViewControl1.Name = "backstageViewControl1";
             this.backstageViewControl1.Office2013StyleOptions.AllowShowHideAnimation = false;
             this.backstageViewControl1.OwnerControl = this.ribbonControl1;
-            this.backstageViewControl1.Size = new System.Drawing.Size(338, 53);
+            this.backstageViewControl1.Size = new System.Drawing.Size(338, 35);
             this.backstageViewControl1.Style = DevExpress.XtraBars.Ribbon.BackstageViewStyle.Office2013;
             this.backstageViewControl1.TabIndex = 5;
             // 
@@ -228,12 +266,12 @@
             this.barStaticItem1.Name = "barStaticItem1";
             this.barStaticItem1.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
-            // barButtonItem2
+            // newStdBtn
             // 
-            this.barButtonItem2.Caption = "student";
-            this.barButtonItem2.Id = 4;
-            this.barButtonItem2.Name = "barButtonItem2";
-            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
+            this.newStdBtn.Caption = "student";
+            this.newStdBtn.Id = 4;
+            this.newStdBtn.Name = "newStdBtn";
+            this.newStdBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.newStdBtn_ItemClick);
             // 
             // barButtonItem3
             // 
@@ -284,13 +322,13 @@
             this.barButtonItem7.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.LargeGlyph")));
             this.barButtonItem7.Name = "barButtonItem7";
             // 
-            // barStaticItem4
+            // panelsLabel
             // 
-            this.barStaticItem4.Caption = "panels :";
-            this.barStaticItem4.Enabled = false;
-            this.barStaticItem4.Id = 14;
-            this.barStaticItem4.Name = "barStaticItem4";
-            this.barStaticItem4.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.panelsLabel.Caption = "panels :";
+            this.panelsLabel.Enabled = false;
+            this.panelsLabel.Id = 14;
+            this.panelsLabel.Name = "panelsLabel";
+            this.panelsLabel.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
             // groupscheckButt
             // 
@@ -395,7 +433,7 @@
             this.popupControlContainer2.Location = new System.Drawing.Point(750, 12);
             this.popupControlContainer2.Name = "popupControlContainer2";
             this.popupControlContainer2.Ribbon = this.ribbonControl1;
-            this.popupControlContainer2.Size = new System.Drawing.Size(247, 96);
+            this.popupControlContainer2.Size = new System.Drawing.Size(247, 35);
             this.popupControlContainer2.TabIndex = 12;
             this.popupControlContainer2.Visible = false;
             // 
@@ -453,12 +491,14 @@
             this.dateEdit1.Size = new System.Drawing.Size(100, 20);
             this.dateEdit1.TabIndex = 4;
             // 
-            // barButtonGroup1
+            // newGroupBtn
             // 
-            this.barButtonGroup1.Caption = "barButtonGroup1";
-            this.barButtonGroup1.Id = 3;
-            this.barButtonGroup1.Name = "barButtonGroup1";
+            this.newGroupBtn.Caption = "group";
+            this.newGroupBtn.Id = 1;
+            this.newGroupBtn.Name = "newGroupBtn";
+            this.newGroupBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.newGroupBtn_ItemClick);
             // 
+<<<<<<< HEAD
             // barButtonItem8
             // 
             this.barButtonItem8.Caption = "group";
@@ -467,20 +507,23 @@
             this.barButtonItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
             // 
             // ribbonPageCategory1
+=======
+            // schedCategory
+>>>>>>> refs/remotes/origin/master
             // 
-            this.ribbonPageCategory1.Name = "ribbonPageCategory1";
-            this.ribbonPageCategory1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage2});
-            this.ribbonPageCategory1.Text = "ribbonPageCategory1";
-            this.ribbonPageCategory1.Visible = false;
+            this.schedCategory.Name = "schedCategory";
+            this.schedCategory.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.schedPageCat});
+            this.schedCategory.Text = "schedCategory";
+            this.schedCategory.Visible = false;
             // 
-            // ribbonPage2
+            // schedPageCat
             // 
-            this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.schedPageCat.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup2});
-            this.ribbonPage2.Name = "ribbonPage2";
-            this.ribbonPage2.Text = "river tiber | sched";
-            this.ribbonPage2.Visible = false;
+            this.schedPageCat.Name = "schedPageCat";
+            this.schedPageCat.Text = "river tiber | sched";
+            this.schedPageCat.Visible = false;
             // 
             // ribbonPageGroup2
             // 
@@ -489,35 +532,20 @@
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem7, true);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem6);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonGroup1);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "ribbonPageGroup2";
             // 
-            // ribbonPage3
+            // peoplePage
             // 
-            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup3});
-            this.ribbonPage3.Name = "ribbonPage3";
-            this.ribbonPage3.Text = "display";
+            this.peoplePage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.peoplesBtnsGroup,
+            this.viewBtnsGroup});
+            this.peoplePage.Name = "peoplePage";
+            this.peoplePage.Text = "main";
             // 
-            // ribbonPageGroup3
+            // peoplesBtnsGroup
             // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.barStaticItem4);
-            this.ribbonPageGroup3.ItemLinks.Add(this.groupscheckButt);
-            this.ribbonPageGroup3.ItemLinks.Add(this.stdscheckButt);
-            this.ribbonPageGroup3.ItemLinks.Add(this.schedcheckButt);
-            this.ribbonPageGroup3.ItemLinks.Add(this.stdtlscheckButt);
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem9, true);
-            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "ribbonPageGroup3";
-            // 
-            // ribbonPage1
-            // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "students \\ groups";
-            // 
+<<<<<<< HEAD
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.barStaticItem1);
@@ -529,10 +557,23 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem5, true);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "ribbonPageGroup1";
+=======
+            this.peoplesBtnsGroup.ItemLinks.Add(this.barStaticItem1);
+            this.peoplesBtnsGroup.ItemLinks.Add(this.newGroupBtn);
+            this.peoplesBtnsGroup.ItemLinks.Add(this.newStdBtn);
+            this.peoplesBtnsGroup.ItemLinks.Add(this.barStaticItem2, true);
+            this.peoplesBtnsGroup.ItemLinks.Add(this.barButtonItem3);
+            this.peoplesBtnsGroup.ItemLinks.Add(this.barButtonItem4);
+            this.peoplesBtnsGroup.ItemLinks.Add(this.barButtonItem5, true);
+            this.peoplesBtnsGroup.Name = "peoplesBtnsGroup";
+            this.peoplesBtnsGroup.ShowCaptionButton = false;
+            this.peoplesBtnsGroup.Text = "groups / ppls";
+>>>>>>> refs/remotes/origin/master
             // 
             // ribbonStatusBar1
             // 
             this.ribbonStatusBar1.ItemLinks.Add(this.barStaticItem5);
+            this.ribbonStatusBar1.ItemLinks.Add(this.bugBtn);
             this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 506);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
@@ -827,7 +868,11 @@
             // 
             this.schedv2.Controls.Add(this.controlContainer4);
             this.schedv2.Dock = DevExpress.XtraBars.Docking.DockingStyle.Float;
+<<<<<<< HEAD
             this.schedv2.FloatLocation = new System.Drawing.Point(517, 223);
+=======
+            this.schedv2.FloatLocation = new System.Drawing.Point(420, 220);
+>>>>>>> refs/remotes/origin/master
             this.schedv2.FloatSize = new System.Drawing.Size(907, 499);
             this.schedv2.ID = new System.Guid("4a9a23dc-16ba-4181-9fd7-dba8d0e7d0e6");
             this.schedv2.Location = new System.Drawing.Point(-32768, -32768);
@@ -852,10 +897,10 @@
             this.stdsPanel.Controls.Add(this.dockPanel3_Container);
             this.stdsPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right;
             this.stdsPanel.ID = new System.Guid("3f831cc1-a0f7-4b9c-a1dc-47279b2509b2");
-            this.stdsPanel.Location = new System.Drawing.Point(1003, 83);
+            this.stdsPanel.Location = new System.Drawing.Point(1003, 80);
             this.stdsPanel.Name = "stdsPanel";
             this.stdsPanel.OriginalSize = new System.Drawing.Size(403, 200);
-            this.stdsPanel.Size = new System.Drawing.Size(403, 423);
+            this.stdsPanel.Size = new System.Drawing.Size(403, 426);
             this.stdsPanel.Text = "students";
             // 
             // dockPanel3_Container
@@ -863,7 +908,7 @@
             this.dockPanel3_Container.Controls.Add(this.navBarControl1);
             this.dockPanel3_Container.Location = new System.Drawing.Point(5, 38);
             this.dockPanel3_Container.Name = "dockPanel3_Container";
-            this.dockPanel3_Container.Size = new System.Drawing.Size(394, 381);
+            this.dockPanel3_Container.Size = new System.Drawing.Size(394, 384);
             this.dockPanel3_Container.TabIndex = 0;
             // 
             // navBarControl1
@@ -886,7 +931,7 @@
             this.navBarControl1.OptionsNavPane.ShowHeaderText = false;
             this.navBarControl1.OptionsNavPane.ShowOverflowPanel = false;
             this.navBarControl1.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
-            this.navBarControl1.Size = new System.Drawing.Size(394, 381);
+            this.navBarControl1.Size = new System.Drawing.Size(394, 384);
             this.navBarControl1.SkinExplorerBarViewScrollStyle = DevExpress.XtraNavBar.SkinExplorerBarViewScrollStyle.Buttons;
             this.navBarControl1.StoreDefaultPaintStyleName = true;
             this.navBarControl1.TabIndex = 0;
@@ -925,12 +970,18 @@
             this.groupsPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.groupsPanel.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.groupsPanel.ID = new System.Guid("5b2a1764-9447-4907-be83-db85871a2ecc");
-            this.groupsPanel.Location = new System.Drawing.Point(0, 83);
+            this.groupsPanel.Location = new System.Drawing.Point(0, 80);
             this.groupsPanel.Name = "groupsPanel";
             this.groupsPanel.Options.ShowAutoHideButton = false;
+<<<<<<< HEAD
             this.groupsPanel.Options.ShowMaximizeButton = false;
             this.groupsPanel.OriginalSize = new System.Drawing.Size(168, 200);
             this.groupsPanel.Size = new System.Drawing.Size(168, 423);
+=======
+            this.groupsPanel.Options.ShowCloseButton = false;
+            this.groupsPanel.OriginalSize = new System.Drawing.Size(183, 200);
+            this.groupsPanel.Size = new System.Drawing.Size(183, 426);
+>>>>>>> refs/remotes/origin/master
             this.groupsPanel.Text = "groups";
             // 
             // dockPanel1_Container
@@ -938,7 +989,11 @@
             this.dockPanel1_Container.Controls.Add(this.navBarControl2);
             this.dockPanel1_Container.Location = new System.Drawing.Point(4, 38);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
+<<<<<<< HEAD
             this.dockPanel1_Container.Size = new System.Drawing.Size(159, 381);
+=======
+            this.dockPanel1_Container.Size = new System.Drawing.Size(174, 384);
+>>>>>>> refs/remotes/origin/master
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // navBarControl2
@@ -957,14 +1012,22 @@
             this.navBarControl2.LinkSelectionMode = DevExpress.XtraNavBar.LinkSelectionModeType.OneInControl;
             this.navBarControl2.Location = new System.Drawing.Point(0, 0);
             this.navBarControl2.Name = "navBarControl2";
+<<<<<<< HEAD
             this.navBarControl2.OptionsNavPane.ExpandedWidth = 159;
+=======
+            this.navBarControl2.OptionsNavPane.ExpandedWidth = 174;
+>>>>>>> refs/remotes/origin/master
             this.navBarControl2.OptionsNavPane.ShowExpandButton = false;
             this.navBarControl2.OptionsNavPane.ShowHeaderText = false;
             this.navBarControl2.OptionsNavPane.ShowOverflowButton = false;
             this.navBarControl2.OptionsNavPane.ShowOverflowPanel = false;
             this.navBarControl2.OptionsNavPane.ShowSplitter = false;
             this.navBarControl2.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane;
+<<<<<<< HEAD
             this.navBarControl2.Size = new System.Drawing.Size(159, 381);
+=======
+            this.navBarControl2.Size = new System.Drawing.Size(174, 384);
+>>>>>>> refs/remotes/origin/master
             this.navBarControl2.SkinExplorerBarViewScrollStyle = DevExpress.XtraNavBar.SkinExplorerBarViewScrollStyle.Buttons;
             this.navBarControl2.StoreDefaultPaintStyleName = true;
             this.navBarControl2.TabIndex = 1;
@@ -993,6 +1056,74 @@
             this.navBarItem6.Caption = "navBarItem3";
             this.navBarItem6.Name = "navBarItem6";
             // 
+<<<<<<< HEAD
+=======
+            // ribbonMiniToolbar1
+            // 
+            this.ribbonMiniToolbar1.ItemLinks.Add(this.bugBtn);
+            // 
+            // bugBtn
+            // 
+            this.bugBtn.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.bugBtn.Caption = "> here\'s bug";
+            this.bugBtn.Glyph = ((System.Drawing.Image)(resources.GetObject("bugBtn.Glyph")));
+            this.bugBtn.Id = 2;
+            this.bugBtn.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bugBtn.LargeGlyph")));
+            this.bugBtn.Name = "bugBtn";
+            // 
+            // viewMenu
+            // 
+            this.viewMenu.Caption = "view";
+            this.viewMenu.Id = 3;
+            this.viewMenu.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.groupViewCheck),
+            new DevExpress.XtraBars.LinkPersistInfo(this.stdViewCheck),
+            new DevExpress.XtraBars.LinkPersistInfo(this.dtlsViewCheck, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.schedViewCheck, true)});
+            this.viewMenu.Name = "viewMenu";
+            this.viewMenu.ShowNavigationHeader = DevExpress.Utils.DefaultBoolean.False;
+            // 
+            // repositoryItemPopupContainerEdit1
+            // 
+            this.repositoryItemPopupContainerEdit1.AutoHeight = false;
+            this.repositoryItemPopupContainerEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemPopupContainerEdit1.Name = "repositoryItemPopupContainerEdit1";
+            // 
+            // groupViewCheck
+            // 
+            this.groupViewCheck.Caption = "group";
+            this.groupViewCheck.Id = 5;
+            this.groupViewCheck.Name = "groupViewCheck";
+            // 
+            // stdViewCheck
+            // 
+            this.stdViewCheck.Caption = "students";
+            this.stdViewCheck.Id = 6;
+            this.stdViewCheck.Name = "stdViewCheck";
+            // 
+            // schedViewCheck
+            // 
+            this.schedViewCheck.Caption = "scheduler";
+            this.schedViewCheck.Id = 7;
+            this.schedViewCheck.Name = "schedViewCheck";
+            this.schedViewCheck.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.schedViewCheck_CheckedChanged);
+            // 
+            // dtlsViewCheck
+            // 
+            this.dtlsViewCheck.Caption = "details";
+            this.dtlsViewCheck.Id = 8;
+            this.dtlsViewCheck.Name = "dtlsViewCheck";
+            // 
+            // viewBtnsGroup
+            // 
+            this.viewBtnsGroup.ItemLinks.Add(this.viewMenu);
+            this.viewBtnsGroup.ItemLinks.Add(this.barButtonItem9);
+            this.viewBtnsGroup.Name = "viewBtnsGroup";
+            this.viewBtnsGroup.ShowCaptionButton = false;
+            this.viewBtnsGroup.Text = "view";
+            // 
+>>>>>>> refs/remotes/origin/master
             // rwrkmain
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -1039,6 +1170,10 @@
             this.groupsPanel.ResumeLayout(false);
             this.dockPanel1_Container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl2)).EndInit();
+<<<<<<< HEAD
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPopupContainerEdit1)).EndInit();
+>>>>>>> refs/remotes/origin/master
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1047,8 +1182,8 @@
         #endregion
 
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage peoplePage;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup peoplesBtnsGroup;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
         private DevExpress.XtraBars.FormAssistant formAssistant1;
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
@@ -1058,14 +1193,14 @@
         private DevExpress.XtraBars.Docking.DockPanel groupsPanel;
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel1_Container;
         private DevExpress.XtraBars.BarStaticItem barStaticItem1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem newStdBtn;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
         private DevExpress.XtraBars.BarStaticItem barStaticItem2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
+        private DevExpress.XtraBars.Ribbon.RibbonPage schedPageCat;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.Docking.DockPanel stdsPanel;
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel3_Container;
@@ -1076,12 +1211,10 @@
         private DevExpress.XtraNavBar.NavBarItem navBarItem3;
         private DevExpress.XtraBars.Docking2010.DocumentManager documentManager1;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
-        private DevExpress.XtraBars.BarStaticItem barStaticItem4;
+        private DevExpress.XtraBars.BarStaticItem panelsLabel;
         private DevExpress.XtraBars.BarCheckItem groupscheckButt;
         private DevExpress.XtraBars.BarCheckItem stdscheckButt;
-        private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPageCategory1;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.Ribbon.RibbonPageCategory schedCategory;
         private DevExpress.XtraBars.BarCheckItem schedcheckButt;
         private DevExpress.XtraBars.BarStaticItem barStaticItem5;
         private DevExpress.XtraBars.BarCheckItem stdtlscheckButt;
@@ -1127,9 +1260,21 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.DateEdit dateEdit1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraBars.BarButtonGroup barButtonGroup1;
         private DevExpress.XtraBars.Docking.DockPanel schedv2;
         private DevExpress.XtraBars.Docking.ControlContainer controlContainer4;
+<<<<<<< HEAD
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
+=======
+        private DevExpress.XtraBars.BarButtonItem newGroupBtn;
+        private DevExpress.XtraBars.BarButtonItem bugBtn;
+        private DevExpress.XtraBars.BarSubItem viewMenu;
+        private DevExpress.XtraBars.BarCheckItem groupViewCheck;
+        private DevExpress.XtraBars.BarCheckItem stdViewCheck;
+        private DevExpress.XtraBars.BarCheckItem dtlsViewCheck;
+        private DevExpress.XtraBars.BarCheckItem schedViewCheck;
+        private DevExpress.XtraBars.Ribbon.RibbonMiniToolbar ribbonMiniToolbar1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup viewBtnsGroup;
+        private DevExpress.XtraEditors.Repository.RepositoryItemPopupContainerEdit repositoryItemPopupContainerEdit1;
+>>>>>>> refs/remotes/origin/master
     }
 }
